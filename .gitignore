@@ -1,0 +1,18 @@
+node_modules/
+.env
+.DS_Store
+npm-debug.log
+*.log
+.vscode/
+.idea/
+dist/
+build/
+coverage/
+
+# рабочие файлы
+app-backup*.js
+server_backup*.js
+patch_*.py
+test_*.js
+apl-*.js
+*_new.js
