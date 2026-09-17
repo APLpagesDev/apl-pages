@@ -53,11 +53,21 @@ function checkRateLimit(ip, maxRequests = 5, windowMs = 3600000) {
 }
 
 async function sendToTelegram(formData, env) {
+  const result = {
+    sent: false,
+    error: null,
+    debug: {}
+  };
+
+  // Проверяем наличие учётных данных Telegram
   if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) {
-    console.warn('Telegram credentials not configured');
-    return true;
+    result.error = 'Telegram credentials not configured';
+    result.debug.tokenExists = !!env.TELEGRAM_BOT_TOKEN;
+    result.debug.chatIdExists = !!env.TELEGRAM_CHAT_ID;
+    return result;
   }
 
+  // Формируем сообщение
   const message = `🆕 Новая заявка APL Pages Development
 
 👤 Имя: ${sanitize(formData.name)}
@@ -78,38 +88,43 @@ async function sendToTelegram(formData, env) {
 💱 Валюта: ${sanitize(formData.currency) || 'N/A'}`;
 
   const url = `https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`;
+  const chatId = parseInt(env.TELEGRAM_CHAT_ID, 10);
 
-  console.log('=== TELEGRAM DEBUG ===');
-  console.log('URL:', url);
-  console.log('Chat ID:', parseInt(env.TELEGRAM_CHAT_ID, 10));
-  console.log('Message length:', message.length);
-  console.log('Payload:', JSON.stringify({
-    chat_id: parseInt(env.TELEGRAM_CHAT_ID, 10),
-    text: message,
-    disable_web_page_preview: true
-  }));
+  // Записываем debug информацию
+  result.debug.url = url.substring(0, 50) + '...';
+  result.debug.chatId = chatId;
+  result.debug.messageLength = message.length;
 
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: parseInt(env.TELEGRAM_CHAT_ID, 10),
-      text: message,
-      disable_web_page_preview: true
-    })
-  });
+  try {
+    // Отправляем запрос к Telegram API
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message,
+        disable_web_page_preview: true
+      })
+    });
 
-  const responseText = await res.text();
-  console.log('Telegram response status:', res.status);
-  console.log('Telegram response body:', responseText);
-  console.log('=== END DEBUG ===');
+    result.debug.responseStatus = res.status;
+    const responseText = await res.text();
+    result.debug.responseBody = responseText;
 
-  if (!res.ok) {
-    console.error('Telegram API error:', res.status, responseText);
-    return false;
+    // Проверяем успешность ответа
+    if (!res.ok) {
+      result.error = `Telegram API error: ${res.status}`;
+      return result;
+    }
+
+    // Успешно отправлено
+    result.sent = true;
+    return result;
+  } catch (err) {
+    result.error = `Fetch error: ${err.message}`;
+    result.debug.errorStack = err.toString();
+    return result;
   }
-
-  return true;
 }
 
 export async function onRequestPost(context) {
@@ -117,6 +132,7 @@ export async function onRequestPost(context) {
 
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
 
+  // Проверяем rate limit
   if (!checkRateLimit(ip)) {
     return jsonResponse({
       success: false,
@@ -124,6 +140,7 @@ export async function onRequestPost(context) {
     }, 429);
   }
 
+  // Парсим тело запроса
   let body;
   try {
     body = await request.json();
@@ -131,11 +148,13 @@ export async function onRequestPost(context) {
     return jsonResponse({ success: false, error: 'Invalid request body' }, 400);
   }
 
+  // Валидируем форму
   const errors = validateForm(body);
   if (Object.keys(errors).length > 0) {
     return jsonResponse({ success: false, errors }, 400);
   }
 
+  // Санитизируем данные
   const sanitizedData = {
     name: sanitize(body.name),
     contact: sanitize(body.contact),
@@ -147,14 +166,13 @@ export async function onRequestPost(context) {
     currency: sanitize(body.currency, 10)
   };
 
-  const telegramSent = await sendToTelegram(sanitizedData, env);
+  // Отправляем в Telegram и получаем результат с debug информацией
+  const telegramResult = await sendToTelegram(sanitizedData, env);
 
-  if (!telegramSent) {
-    console.warn('Telegram notification failed for:', sanitizedData.contact);
-  }
-
+  // Возвращаем ответ с информацией о статусе отправки в Telegram
   return jsonResponse({
     success: true,
-    message: 'Form submitted successfully'
+    message: 'Form submitted successfully',
+    telegram: telegramResult
   });
 }
