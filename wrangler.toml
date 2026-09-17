@@ -1,0 +1,14 @@
+name = "apls"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "apls"
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.js", "functions/**/*.js"]
+
+[observability]
+enabled = true
