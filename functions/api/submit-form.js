@@ -79,18 +79,33 @@ async function sendToTelegram(formData, env) {
 
   const url = `https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`;
 
+  console.log('=== TELEGRAM DEBUG ===');
+  console.log('URL:', url);
+  console.log('Chat ID:', parseInt(env.TELEGRAM_CHAT_ID, 10));
+  console.log('Message length:', message.length);
+  console.log('Payload:', JSON.stringify({
+    chat_id: parseInt(env.TELEGRAM_CHAT_ID, 10),
+    text: message,
+    disable_web_page_preview: true
+  }));
+
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-  chat_id: parseInt(env.TELEGRAM_CHAT_ID, 10),
-  text: message,
-  disable_web_page_preview: true
-})
+      chat_id: parseInt(env.TELEGRAM_CHAT_ID, 10),
+      text: message,
+      disable_web_page_preview: true
+    })
   });
 
+  const responseText = await res.text();
+  console.log('Telegram response status:', res.status);
+  console.log('Telegram response body:', responseText);
+  console.log('=== END DEBUG ===');
+
   if (!res.ok) {
-    console.error('Telegram API error:', res.status, await res.text());
+    console.error('Telegram API error:', res.status, responseText);
     return false;
   }
 
