@@ -1,12 +1,12 @@
 // ============================================================
 // APL Pages Development — app.js
-// Языки: RU / SR / EN / IT / DE / FR / PL / SK
+// Языки: RU / SR / EN / IT / DE / FR / PL / SK / ES / TR / NL / RO
 // Валюты: EUR / USD
 // Автоопределение языка + анимации
 // ИСПРАВЛЕНА ПРОБЛЕМА С ПЕРЕКЛЮЧАТЕЛЕМ ЯЗЫКА
 // ============================================================
 
-console.log('APL APP.JS — BUILD v12 (mobile menu position fixed)');
+console.log('APL APP.JS — BUILD v13 (added ES/TR/NL/RO languages)');
 
 const translations = {
   ru: {
@@ -407,6 +407,202 @@ const translations = {
       { title: '📊 Databáza klientov', desc: 'Jednoduchý a praktický systém na správu kontaktov.' },
       { title: '🔌 API integrácie', desc: 'Prepojí váš projekt s externými službami.' }
     ]
+  },
+  es: {
+    navHome: "🏠 Inicio",
+    navServices: "⚙️ Servicios",
+    navContacts: "📧 Contactos",
+    heroTitle: "Soluciones digitales para pequeñas empresas",
+    heroTypedPrefix: "Creamos: ",
+    heroTyped: ['Sitios web', 'Bots de Telegram', 'Automatización', 'Integraciones con CRM'],
+    heroSubtitle: "🚀 Sitios web, bots de Telegram y automatización, creados a medida para su negocio.",
+    heroCTA: "💬 Hablar del proyecto",
+    heroMeta: "💰 desde €199 · ⏱️ lanzamiento desde 72 horas",
+    whatCanCreate: "🎯 Qué se puede crear",
+    digitalSolutions: "🛠️ Soluciones digitales",
+    supportTitle: "🔧 Soporte",
+    supportDesc: "✅ Soporte técnico, corrección de errores, cambios menores, actualizaciones y ayuda para mantener su proyecto en buen estado.",
+    pricing: "📊 El precio final depende de la tarea y el alcance del trabajo.",
+    currencyLabel: "💱 Moneda:",
+    currencyNote: "💵 EUR es la moneda base. Los importes en USD son orientativos, según el tipo de cambio actual.",
+    perMonth: "/mes",
+    ctaTitle: "❓ ¿Tiene una tarea pero no sabe qué solución necesita?",
+    ctaDesc: "💡 Cuéntenos sobre ella — le propondremos la opción adecuada.",
+    formTitle: "📝 Hablar del proyecto",
+    formNameLabel: "👤 Nombre",
+    formContactLabel: "📱 Telegram / Email / otro contacto",
+    formContactPlaceholder: "@telegram o email@example.com",
+    formPhoneLabel: "☎️ Teléfono",
+    formBudgetLabel: "💰 Presupuesto aproximado",
+    formBudgetPlaceholder: "por ejemplo, €500–1000",
+    formTaskLabel: "🛠️ ¿Qué necesita crear?",
+    formInfoLabel: "📝 Información adicional",
+    formSubmit: "✉️ Enviar solicitud",
+    formSuccess: "✅ Solicitud enviada. Nos pondremos en contacto con usted en breve.",
+    formError: "❌ Error al enviar. Inténtelo de nuevo.",
+    contactTitle: "📞 Contactos",
+    footerDesc: "🌐 Soluciones digitales para pequeñas empresas.",
+    privacyPolicy: "🔒 Política de privacidad",
+    terms: "📋 Términos",
+    legalInfo: "⚖️ Información legal",
+    legalHeading: "⚖️ Legal",
+    solutions: [
+      { title: "🌐 Sitio web para pequeñas empresas", desc: "Un sitio web moderno y responsivo, optimizado para buscadores." },
+      { title: "🎯 Landing page", desc: "Una página de alta conversión diseñada para atraer clientes." },
+      { title: "🤖 Bot de Telegram", desc: "Automatiza la comunicación y la captación de solicitudes." },
+      { title: "🔗 Telegram → CRM", desc: "Conecta el bot con su sistema de gestión." },
+      { title: "📨 Formulario → Telegram", desc: "Notificaciones instantáneas de cada nueva solicitud." },
+      { title: "⚡ Automatización de procesos", desc: "Tareas rutinarias realizadas sin intervención humana." },
+      { title: "📊 Base de datos de clientes", desc: "Un sistema simple y práctico de gestión de contactos." },
+      { title: "🔌 Integraciones API", desc: "Conecta su proyecto con servicios externos." },
+    ]
+  },
+  tr: {
+    navHome: "🏠 Ana Sayfa",
+    navServices: "⚙️ Hizmetler",
+    navContacts: "📧 İletişim",
+    heroTitle: "Küçük işletmeler için dijital çözümler",
+    heroTypedPrefix: "Oluşturuyoruz: ",
+    heroTyped: ['Web siteleri', 'Telegram botları', 'Otomasyon', 'CRM entegrasyonları'],
+    heroSubtitle: "🚀 İşletmenizin ihtiyaçlarına göre tasarlanmış web siteleri, Telegram botları ve otomasyon.",
+    heroCTA: "💬 Projeyi görüşelim",
+    heroMeta: "💰 €199'dan başlayan fiyatlarla · ⏱️ 72 saatten itibaren teslim",
+    whatCanCreate: "🎯 Neler oluşturulabilir",
+    digitalSolutions: "🛠️ Dijital Çözümler",
+    supportTitle: "🔧 Destek",
+    supportDesc: "✅ Teknik destek, hata düzeltmeleri, küçük değişiklikler, güncellemeler ve projenizin sağlıklı kalması için yardım.",
+    pricing: "📊 Nihai fiyat, görevin ve iş kapsamının büyüklüğüne bağlıdır.",
+    currencyLabel: "💱 Para birimi:",
+    currencyNote: "💵 EUR temel para birimidir. USD tutarları güncel kura göre bilgi amaçlıdır.",
+    perMonth: "/ay",
+    ctaTitle: "❓ Bir göreviniz var ama hangi çözüme ihtiyacınız olduğundan emin değil misiniz?",
+    ctaDesc: "💡 Bize anlatın — size uygun seçeneği önerelim.",
+    formTitle: "📝 Projeyi görüşelim",
+    formNameLabel: "👤 Ad",
+    formContactLabel: "📱 Telegram / E-posta / diğer iletişim",
+    formContactPlaceholder: "@telegram veya email@example.com",
+    formPhoneLabel: "☎️ Telefon",
+    formBudgetLabel: "💰 Yaklaşık bütçe",
+    formBudgetPlaceholder: "örneğin, €500–1000",
+    formTaskLabel: "🛠️ Ne oluşturulması gerekiyor?",
+    formInfoLabel: "📝 Ek bilgi",
+    formSubmit: "✉️ Talebi gönder",
+    formSuccess: "✅ Talep gönderildi. En kısa sürede sizinle iletişime geçeceğiz.",
+    formError: "❌ Gönderim sırasında hata oluştu. Lütfen tekrar deneyin.",
+    contactTitle: "📞 İletişim",
+    footerDesc: "🌐 Küçük işletmeler için dijital çözümler.",
+    privacyPolicy: "🔒 Gizlilik Politikası",
+    terms: "📋 Koşullar",
+    legalInfo: "⚖️ Yasal Bilgiler",
+    legalHeading: "⚖️ Yasal",
+    solutions: [
+      { title: "🌐 Küçük işletme web sitesi", desc: "Arama motorları için optimize edilmiş, modern ve duyarlı bir web sitesi." },
+      { title: "🎯 Açılış sayfası (Landing page)", desc: "Müşteri çekmek için tasarlanmış yüksek dönüşümlü bir sayfa." },
+      { title: "🤖 Telegram botu", desc: "İletişimi ve talep toplamayı otomatikleştirir." },
+      { title: "🔗 Telegram → CRM", desc: "Botu yönetim sisteminize bağlar." },
+      { title: "📨 Form → Telegram", desc: "Her yeni talep için anında bildirim." },
+      { title: "⚡ Süreç otomasyonu", desc: "Rutin görevler insan müdahalesi olmadan gerçekleştirilir." },
+      { title: "📊 Müşteri veritabanı", desc: "Basit ve kullanışlı bir kişi yönetim sistemi." },
+      { title: "🔌 API entegrasyonları", desc: "Projenizi harici hizmetlere bağlar." },
+    ]
+  },
+  nl: {
+    navHome: "🏠 Home",
+    navServices: "⚙️ Diensten",
+    navContacts: "📧 Contact",
+    heroTitle: "Digitale oplossingen voor kleine bedrijven",
+    heroTypedPrefix: "Wij bouwen: ",
+    heroTyped: ['Websites', 'Telegram-bots', 'Automatisering', 'CRM-integraties'],
+    heroSubtitle: "🚀 Websites, Telegram-bots en automatisering, op maat gemaakt voor uw bedrijf.",
+    heroCTA: "💬 Project bespreken",
+    heroMeta: "💰 vanaf €199 · ⏱️ oplevering vanaf 72 uur",
+    whatCanCreate: "🎯 Wat kan er worden gemaakt",
+    digitalSolutions: "🛠️ Digitale Oplossingen",
+    supportTitle: "🔧 Ondersteuning",
+    supportDesc: "✅ Technische ondersteuning, bugfixes, kleine wijzigingen, updates en hulp om uw project in goede staat te houden.",
+    pricing: "📊 De uiteindelijke prijs hangt af van de taak en de omvang van het werk.",
+    currencyLabel: "💱 Valuta:",
+    currencyNote: "💵 EUR is de basisvaluta. Bedragen in USD zijn indicatief, gebaseerd op de actuele wisselkoers.",
+    perMonth: "/mnd",
+    ctaTitle: "❓ Heeft u een taak maar weet u niet welke oplossing u nodig heeft?",
+    ctaDesc: "💡 Vertel ons erover — wij stellen de juiste optie voor.",
+    formTitle: "📝 Project bespreken",
+    formNameLabel: "👤 Naam",
+    formContactLabel: "📱 Telegram / e-mail / ander contact",
+    formContactPlaceholder: "@telegram of email@example.com",
+    formPhoneLabel: "☎️ Telefoon",
+    formBudgetLabel: "💰 Geschat budget",
+    formBudgetPlaceholder: "bijv. €500–1000",
+    formTaskLabel: "🛠️ Wat moet er worden gemaakt?",
+    formInfoLabel: "📝 Aanvullende informatie",
+    formSubmit: "✉️ Aanvraag versturen",
+    formSuccess: "✅ Aanvraag verzonden. We nemen binnenkort contact met u op.",
+    formError: "❌ Fout bij verzenden. Probeer het opnieuw.",
+    contactTitle: "📞 Contact",
+    footerDesc: "🌐 Digitale oplossingen voor kleine bedrijven.",
+    privacyPolicy: "🔒 Privacybeleid",
+    terms: "📋 Voorwaarden",
+    legalInfo: "⚖️ Juridische informatie",
+    legalHeading: "⚖️ Juridisch",
+    solutions: [
+      { title: "🌐 Website voor kleine bedrijven", desc: "Een moderne, responsieve website, geoptimaliseerd voor zoekmachines." },
+      { title: "🎯 Landingspagina", desc: "Een hoogconverterende pagina om klanten aan te trekken." },
+      { title: "🤖 Telegram-bot", desc: "Automatiseert communicatie en het verzamelen van aanvragen." },
+      { title: "🔗 Telegram → CRM", desc: "Koppelt de bot aan uw beheersysteem." },
+      { title: "📨 Formulier → Telegram", desc: "Directe meldingen bij elke nieuwe aanvraag." },
+      { title: "⚡ Procesautomatisering", desc: "Routinetaken worden zonder menselijke tussenkomst uitgevoerd." },
+      { title: "📊 Klantendatabase", desc: "Een eenvoudig en praktisch systeem voor contactbeheer." },
+      { title: "🔌 API-integraties", desc: "Koppelt uw project aan externe diensten." },
+    ]
+  },
+  ro: {
+    navHome: "🏠 Acasă",
+    navServices: "⚙️ Servicii",
+    navContacts: "📧 Contact",
+    heroTitle: "Soluții digitale pentru afaceri mici",
+    heroTypedPrefix: "Creăm: ",
+    heroTyped: ['Site-uri web', 'Boți Telegram', 'Automatizare', 'Integrări CRM'],
+    heroSubtitle: "🚀 Site-uri web, boți Telegram și automatizare, create special pentru afacerea dumneavoastră.",
+    heroCTA: "💬 Discutăm proiectul",
+    heroMeta: "💰 de la €199 · ⏱️ lansare în 72 de ore",
+    whatCanCreate: "🎯 Ce se poate crea",
+    digitalSolutions: "🛠️ Soluții Digitale",
+    supportTitle: "🔧 Suport",
+    supportDesc: "✅ Suport tehnic, corectarea erorilor, modificări minore, actualizări și ajutor pentru menținerea proiectului în stare bună.",
+    pricing: "📊 Prețul final depinde de sarcină și de volumul lucrărilor.",
+    currencyLabel: "💱 Monedă:",
+    currencyNote: "💵 EUR este moneda de bază. Sumele în USD sunt orientative, conform cursului actual de schimb.",
+    perMonth: "/lună",
+    ctaTitle: "❓ Aveți o sarcină, dar nu știți ce soluție vă trebuie?",
+    ctaDesc: "💡 Spuneți-ne despre ea — vă vom propune varianta potrivită.",
+    formTitle: "📝 Discutăm proiectul",
+    formNameLabel: "👤 Nume",
+    formContactLabel: "📱 Telegram / Email / alt contact",
+    formContactPlaceholder: "@telegram sau email@example.com",
+    formPhoneLabel: "☎️ Telefon",
+    formBudgetLabel: "💰 Buget aproximativ",
+    formBudgetPlaceholder: "de exemplu, €500–1000",
+    formTaskLabel: "🛠️ Ce trebuie creat?",
+    formInfoLabel: "📝 Informații suplimentare",
+    formSubmit: "✉️ Trimite cererea",
+    formSuccess: "✅ Cererea a fost trimisă. Vă vom contacta în curând.",
+    formError: "❌ Eroare la trimitere. Încercați din nou.",
+    contactTitle: "📞 Contact",
+    footerDesc: "🌐 Soluții digitale pentru afaceri mici.",
+    privacyPolicy: "🔒 Politica de confidențialitate",
+    terms: "📋 Termeni",
+    legalInfo: "⚖️ Informații legale",
+    legalHeading: "⚖️ Legal",
+    solutions: [
+      { title: "🌐 Site web pentru afaceri mici", desc: "Un site web modern, responsiv, optimizat pentru motoarele de căutare." },
+      { title: "🎯 Pagină de destinație (Landing page)", desc: "O pagină cu conversie ridicată, creată pentru a atrage clienți." },
+      { title: "🤖 Bot Telegram", desc: "Automatizează comunicarea și colectarea cererilor." },
+      { title: "🔗 Telegram → CRM", desc: "Conectează botul cu sistemul dumneavoastră de gestiune." },
+      { title: "📨 Formular → Telegram", desc: "Notificări instantanee pentru fiecare cerere nouă." },
+      { title: "⚡ Automatizarea proceselor", desc: "Sarcinile de rutină sunt efectuate fără intervenție umană." },
+      { title: "📊 Bază de date clienți", desc: "Un sistem simplu și practic de gestionare a contactelor." },
+      { title: '🔌 Integrări API', desc: 'Conectează proiectul dumneavoastră la servicii externe.' },
+    ]
   }
 };
 
@@ -518,6 +714,330 @@ const LEGAL_PAGES = {
         { h: '4. Governing Law', p: ['The law of the service provider\u2019s country of registration applies.'] }
       ]
     }
+  },
+  it: {
+    privacy: {
+      title: '🔒 Informativa sulla privacy',
+      effective: 'Data di entrata in vigore: 1 gennaio 2026',
+      sections: [
+        { h: '1. Informazioni generali', p: ['Questa informativa spiega quali dati raccogliamo su questo sito, perché li utilizziamo e come li proteggiamo.'] },
+        { h: '2. Dati raccolti', p: ['Trattiamo solo i dati forniti tramite il modulo: nome, contatti, telefono, budget e descrizione del progetto.'] },
+        { h: '3. Utilizzo dei dati', p: ['I dati sono utilizzati esclusivamente per contattarvi e discutere il progetto. Non li vendiamo né li condividiamo con reti pubblicitarie.'] },
+        { h: '4. Terze parti', p: ['Le richieste vengono inviate tramite Telegram per una risposta più rapida. Il trattamento è regolato dai termini di Telegram.'] },
+        { h: '5. Conservazione', p: ['Conserviamo i dati solo per il tempo necessario al progetto e li eliminiamo su richiesta.'] },
+        { h: '6. I vostri diritti', p: ['Potete richiedere accesso, rettifica o cancellazione dei dati utilizzando i contatti indicati sul sito.'] },
+      ]
+    },
+    terms: {
+      title: '📋 Termini di servizio',
+      effective: 'Data di entrata in vigore: 1 gennaio 2026',
+      sections: [
+        { h: '1. Accettazione dei termini', p: ['Utilizzando il sito e inviando una richiesta, accettate questi termini.'] },
+        { h: '2. Ambito del lavoro', p: ['Creiamo siti web, bot Telegram, integrazioni e automazioni per ogni progetto.'] },
+        { h: '3. Prezzi e pagamento', p: ['I prezzi indicati sono iniziali. L’importo finale viene concordato prima dell’inizio dei lavori.'] },
+        { h: '4. Proprietà', p: ['Dopo il pagamento completo, i diritti sul prodotto consegnato passano al cliente.'] },
+        { h: '5. Limitazione di responsabilità', p: ['Non siamo responsabili per interruzioni di servizi di terze parti che non controlliamo.'] },
+        { h: '6. Modifiche ai termini', p: ['Possiamo aggiornare questi termini. La versione attuale è pubblicata su questa pagina.'] },
+      ]
+    },
+    legal: {
+      title: '⚖️ Informazioni legali',
+      effective: 'Data di entrata in vigore: 1 gennaio 2026',
+      sections: [
+        { h: '1. Proprietario del sito', p: ['Questo sito è gestito dal team di APL Pages Development.'] },
+        { h: '2. Contatti', p: ['Per domande legali, utilizzate i contatti indicati nella sezione Contatti.'] },
+        { h: '3. Esclusione di responsabilità', p: ['Le informazioni sono fornite a scopo generale e non costituiscono un’offerta pubblica.'] },
+        { h: '4. Legge applicabile', p: ['Si applica la legge del Paese in cui il fornitore del servizio è registrato.'] },
+      ]
+    }
+  },
+  de: {
+    privacy: {
+      title: '🔒 Datenschutzrichtlinie',
+      effective: 'Gültig ab: 1. Januar 2026',
+      sections: [
+        { h: '1. Übersicht', p: ['Diese Richtlinie erklärt, welche Daten wir erfassen, warum wir sie verwenden und wie wir sie schützen.'] },
+        { h: '2. Erfasste Informationen', p: ['Wir verarbeiten nur Daten aus dem Anfrageformular: Name, Kontaktdaten, Telefon, Budget und Projektbeschreibung.'] },
+        { h: '3. Verwendung der Informationen', p: ['Ihre Daten dienen ausschließlich der Kontaktaufnahme und Projektbesprechung. Wir verkaufen sie nicht und teilen sie nicht mit Werbenetzwerken.'] },
+        { h: '4. Dritte', p: ['Anfragen werden für eine schnellere Antwort über Telegram gesendet. Es gelten die Bedingungen von Telegram.'] },
+        { h: '5. Datenspeicherung', p: ['Wir speichern Ihre Daten nur so lange wie für das Projekt erforderlich und löschen sie auf Anfrage.'] },
+        { h: '6. Ihre Rechte', p: ['Sie können Auskunft, Berichtigung oder Löschung Ihrer Daten über die Kontakte auf dieser Website verlangen.'] },
+      ]
+    },
+    terms: {
+      title: '📋 Nutzungsbedingungen',
+      effective: 'Gültig ab: 1. Januar 2026',
+      sections: [
+        { h: '1. Annahme der Bedingungen', p: ['Durch die Nutzung der Website und das Senden einer Anfrage akzeptieren Sie diese Bedingungen.'] },
+        { h: '2. Leistungsumfang', p: ['Wir erstellen Websites, Telegram-Bots, Integrationen und Automatisierungen für jedes Projekt.'] },
+        { h: '3. Preise und Zahlung', p: ['Die angegebenen Preise sind Einstiegspreise. Der Endbetrag wird vor Arbeitsbeginn vereinbart.'] },
+        { h: '4. Eigentum', p: ['Nach vollständiger Zahlung gehen die Rechte am gelieferten Produkt auf den Kunden über.'] },
+        { h: '5. Haftungsbeschränkung', p: ['Wir haften nicht für Ausfälle von Drittanbieterdiensten, die wir nicht kontrollieren.'] },
+        { h: '6. Änderungen', p: ['Wir können diese Bedingungen aktualisieren. Die aktuelle Fassung wird auf dieser Seite veröffentlicht.'] },
+      ]
+    },
+    legal: {
+      title: '⚖️ Rechtliche Informationen',
+      effective: 'Gültig ab: 1. Januar 2026',
+      sections: [
+        { h: '1. Betreiber der Website', p: ['Diese Website wird vom Team von APL Pages Development betrieben.'] },
+        { h: '2. Kontakt', p: ['Für rechtliche Fragen nutzen Sie bitte die Kontakte im Abschnitt Kontakt.'] },
+        { h: '3. Haftungsausschluss', p: ['Die Informationen dienen allgemeinen Informationszwecken und stellen kein öffentliches Angebot dar.'] },
+        { h: '4. Anwendbares Recht', p: ['Es gilt das Recht des Landes, in dem der Dienstanbieter registriert ist.'] },
+      ]
+    }
+  },
+  fr: {
+    privacy: {
+      title: '🔒 Politique de confidentialité',
+      effective: 'Date d’entrée en vigueur : 1er janvier 2026',
+      sections: [
+        { h: '1. Aperçu', p: ['Cette politique explique quelles données nous collectons, pourquoi nous les utilisons et comment nous les protégeons.'] },
+        { h: '2. Données collectées', p: ['Nous traitons uniquement les données fournies dans le formulaire : nom, coordonnées, téléphone, budget et description du projet.'] },
+        { h: '3. Utilisation des données', p: ['Vos données servent uniquement à vous contacter et à discuter du projet. Nous ne les vendons pas et ne les partageons pas avec des réseaux publicitaires.'] },
+        { h: '4. Tiers', p: ['Les demandes sont envoyées via Telegram pour une réponse plus rapide. Le traitement est régi par les conditions de Telegram.'] },
+        { h: '5. Conservation', p: ['Nous conservons les données uniquement pendant la durée nécessaire au projet et les supprimons sur demande.'] },
+        { h: '6. Vos droits', p: ['Vous pouvez demander l’accès, la rectification ou la suppression de vos données via les contacts du site.'] },
+      ]
+    },
+    terms: {
+      title: '📋 Conditions de service',
+      effective: 'Date d’entrée en vigueur : 1er janvier 2026',
+      sections: [
+        { h: '1. Acceptation des conditions', p: ['En utilisant le site et en envoyant une demande, vous acceptez ces conditions.'] },
+        { h: '2. Portée du travail', p: ['Nous créons des sites web, des bots Telegram, des intégrations et des automatisations pour chaque projet.'] },
+        { h: '3. Prix et paiement', p: ['Les prix indiqués sont des prix de départ. Le montant final est convenu avant le début du travail.'] },
+        { h: '4. Propriété', p: ['Après paiement intégral, les droits sur le produit livré sont transférés au client.'] },
+        { h: '5. Limitation de responsabilité', p: ['Nous ne sommes pas responsables des interruptions de services tiers que nous ne contrôlons pas.'] },
+        { h: '6. Modifications', p: ['Nous pouvons mettre à jour ces conditions. La version actuelle est publiée sur cette page.'] },
+      ]
+    },
+    legal: {
+      title: '⚖️ Informations légales',
+      effective: 'Date d’entrée en vigueur : 1er janvier 2026',
+      sections: [
+        { h: '1. Propriétaire du site', p: ['Ce site est géré par l’équipe d’APL Pages Development.'] },
+        { h: '2. Contact', p: ['Pour les questions juridiques, utilisez les coordonnées de la section Contact.'] },
+        { h: '3. Avertissement', p: ['Les informations sont générales et ne constituent pas une offre publique.'] },
+        { h: '4. Droit applicable', p: ['Le droit du pays où le prestataire est enregistré s’applique.'] },
+      ]
+    }
+  },
+  pl: {
+    privacy: {
+      title: '🔒 Polityka prywatności',
+      effective: 'Data wejścia w życie: 1 stycznia 2026',
+      sections: [
+        { h: '1. Informacje ogólne', p: ['Niniejsza polityka wyjaśnia, jakie dane zbieramy, dlaczego ich używamy i jak je chronimy.'] },
+        { h: '2. Zbierane dane', p: ['Przetwarzamy wyłącznie dane podane w formularzu: imię, kontakt, telefon, budżet i opis projektu.'] },
+        { h: '3. Wykorzystanie danych', p: ['Dane służą wyłącznie do kontaktu i omówienia projektu. Nie sprzedajemy ich ani nie udostępniamy sieciom reklamowym.'] },
+        { h: '4. Strony trzecie', p: ['Zgłoszenia są wysyłane przez Telegram w celu szybszej odpowiedzi. Obowiązują warunki Telegrama.'] },
+        { h: '5. Przechowywanie', p: ['Dane przechowujemy tylko przez czas potrzebny do realizacji projektu i usuwamy na żądanie.'] },
+        { h: '6. Twoje prawa', p: ['Możesz żądać dostępu do danych, ich poprawienia lub usunięcia, korzystając z kontaktów na stronie.'] },
+      ]
+    },
+    terms: {
+      title: '📋 Warunki świadczenia usług',
+      effective: 'Data wejścia w życie: 1 stycznia 2026',
+      sections: [
+        { h: '1. Akceptacja warunków', p: ['Korzystając ze strony i wysyłając zgłoszenie, akceptujesz te warunki.'] },
+        { h: '2. Zakres prac', p: ['Tworzymy strony internetowe, boty Telegram, integracje i automatyzacje dla każdego projektu.'] },
+        { h: '3. Ceny i płatność', p: ['Podane ceny są początkowe. Ostateczna kwota jest ustalana przed rozpoczęciem prac.'] },
+        { h: '4. Własność', p: ['Po pełnej zapłacie prawa do dostarczonego produktu przechodzą na klienta.'] },
+        { h: '5. Ograniczenie odpowiedzialności', p: ['Nie odpowiadamy za przerwy w usługach stron trzecich, których nie kontrolujemy.'] },
+        { h: '6. Zmiany', p: ['Możemy aktualizować warunki. Aktualna wersja jest publikowana na tej stronie.'] },
+      ]
+    },
+    legal: {
+      title: '⚖️ Informacje prawne',
+      effective: 'Data wejścia w życie: 1 stycznia 2026',
+      sections: [
+        { h: '1. Właściciel strony', p: ['Strona jest prowadzona przez zespół APL Pages Development.'] },
+        { h: '2. Kontakt', p: ['W sprawach prawnych skorzystaj z danych w sekcji Kontakt.'] },
+        { h: '3. Zastrzeżenie', p: ['Informacje mają charakter ogólny i nie stanowią oferty publicznej.'] },
+        { h: '4. Prawo właściwe', p: ['Zastosowanie ma prawo kraju, w którym zarejestrowano usługodawcę.'] },
+      ]
+    }
+  },
+  sk: {
+    privacy: {
+      title: '🔒 Zásady ochrany osobných údajov',
+      effective: 'Dátum účinnosti: 1. januára 2026',
+      sections: [
+        { h: '1. Prehľad', p: ['Tieto zásady vysvetľujú, aké údaje zhromažďujeme, prečo ich používame a ako ich chránime.'] },
+        { h: '2. Zhromažďované údaje', p: ['Spracúvame iba údaje z formulára: meno, kontakt, telefón, rozpočet a opis projektu.'] },
+        { h: '3. Použitie údajov', p: ['Údaje používame iba na kontaktovanie a prerokovanie projektu. Nepredávame ich ani nezdieľame s reklamnými sieťami.'] },
+        { h: '4. Tretie strany', p: ['Žiadosti posielame cez Telegram kvôli rýchlejšej odpovedi. Spracovanie sa riadi podmienkami Telegramu.'] },
+        { h: '5. Uchovávanie', p: ['Údaje uchovávame len počas potrebný na projekt a na požiadanie ich vymažeme.'] },
+        { h: '6. Vaše práva', p: ['Môžete požiadať o prístup, opravu alebo vymazanie údajov prostredníctvom kontaktov na stránke.'] },
+      ]
+    },
+    terms: {
+      title: '📋 Podmienky poskytovania služieb',
+      effective: 'Dátum účinnosti: 1. januára 2026',
+      sections: [
+        { h: '1. Prijatie podmienok', p: ['Používaním stránky a odoslaním žiadosti súhlasíte s týmito podmienkami.'] },
+        { h: '2. Rozsah práce', p: ['Vytvárame webové stránky, boty Telegram, integrácie a automatizáciu pre každý projekt.'] },
+        { h: '3. Ceny a platba', p: ['Uvedené ceny sú počiatočné. Konečná suma sa dohodne pred začatím práce.'] },
+        { h: '4. Vlastníctvo', p: ['Po úplnej úhrade prechádzajú práva na dodaný produkt na klienta.'] },
+        { h: '5. Obmedzenie zodpovednosti', p: ['Nezodpovedáme za výpadky služieb tretích strán, ktoré nekontrolujeme.'] },
+        { h: '6. Zmeny', p: ['Podmienky môžeme aktualizovať. Aktuálna verzia je zverejnená na tejto stránke.'] },
+      ]
+    },
+    legal: {
+      title: '⚖️ Právne informácie',
+      effective: 'Dátum účinnosti: 1. januára 2026',
+      sections: [
+        { h: '1. Vlastník stránky', p: ['Stránku spravuje tím APL Pages Development.'] },
+        { h: '2. Kontakt', p: ['V prípade právnych otázok použite kontakty v časti Kontakt.'] },
+        { h: '3. Vyhlásenie', p: ['Informácie slúžia na všeobecné účely a nie sú verejnou ponukou.'] },
+        { h: '4. Rozhodné právo', p: ['Uplatňuje sa právo krajiny, v ktorej je poskytovateľ registrovaný.'] },
+      ]
+    }
+  },
+  es: {
+    privacy: {
+      title: "🔒 Política de privacidad",
+      effective: "Fecha de entrada en vigor: 1 de enero de 2026",
+      sections: [
+        { h: "1. Descripción general", p: ["Esta política explica qué datos recopilamos en este sitio, por qué los usamos y cómo los protegemos."] },
+        { h: "2. Información que recopilamos", p: ["Procesamos únicamente los datos que usted proporciona a través del formulario de solicitud: su nombre, datos de contacto, número de teléfono, presupuesto y descripción del proyecto."] },
+        { h: "3. Cómo usamos la información", p: ["Sus datos se utilizan únicamente para contactarlo y discutir el proyecto. No los vendemos ni los compartimos con redes publicitarias."] },
+        { h: "4. Terceros", p: ["Las solicitudes se envían a través del servicio Telegram para una respuesta más rápida. El procesamiento en dicho servicio se rige por sus propios términos."] },
+        { h: "5. Retención de datos", p: ["Conservamos sus datos solo el tiempo necesario para trabajar en el proyecto y los eliminamos a petición suya."] },
+        { h: "6. Sus derechos", p: ["Puede solicitar acceso, corrección o eliminación de sus datos utilizando los contactos indicados en este sitio."] },
+      ]
+    },
+    terms: {
+      title: "📋 Términos de servicio",
+      effective: "Fecha de entrada en vigor: 1 de enero de 2026",
+      sections: [
+        { h: "1. Aceptación de los términos", p: ["Al usar este sitio web y enviar una solicitud, usted acepta estos términos."] },
+        { h: "2. Alcance del trabajo", p: ["Creamos sitios web, bots de Telegram, integraciones y automatización según cada proyecto."] },
+        { h: "3. Precios y pago", p: ["Los precios mostrados en este sitio son precios iniciales. El importe final se acuerda antes de comenzar el trabajo."] },
+        { h: "4. Propiedad", p: ["Tras el pago completo, los derechos sobre el producto entregado se transfieren al cliente."] },
+        { h: "5. Limitación de responsabilidad", p: ["No somos responsables de las interrupciones de servicios de terceros que no controlamos."] },
+        { h: "6. Cambios en los términos", p: ["Podemos actualizar estos términos. La versión actual siempre se publica en esta página."] },
+      ]
+    },
+    legal: {
+      title: "⚖️ Información legal",
+      effective: "Fecha de entrada en vigor: 1 de enero de 2026",
+      sections: [
+        { h: "1. Titular del sitio", p: ["Este sitio web es mantenido por el equipo de APL Pages Development."] },
+        { h: "2. Contacto", p: ["Para consultas legales, utilice los contactos indicados en la sección de Contactos."] },
+        { h: "3. Descargo de contenido", p: ["La información de este sitio se proporciona con fines informativos generales y no constituye una oferta pública."] },
+        { h: "4. Ley aplicable", p: ["Se aplica la legislación del país de registro del proveedor del servicio."] },
+      ]
+    },
+  },
+  tr: {
+    privacy: {
+      title: "🔒 Gizlilik Politikası",
+      effective: "Yürürlük Tarihi: 1 Ocak 2026",
+      sections: [
+        { h: "1. Genel Bakış", p: ["Bu politika, bu web sitesinde hangi verileri topladığımızı, neden kullandığımızı ve nasıl koruduğumuzu açıklar."] },
+        { h: "2. Topladığımız Bilgiler", p: ["Yalnızca talep formu aracılığıyla kendinizin sağladığı verileri işleriz: adınız, iletişim bilgileriniz, telefon numaranız, bütçeniz ve proje açıklamanız."] },
+        { h: "3. Bilgileri Nasıl Kullanıyoruz", p: ["Verileriniz sadece sizinle iletişime geçmek ve projeyi tartışmak için kullanılır. Bunları satmıyor veya reklam ağlarıyla paylaşmıyoruz."] },
+        { h: "4. Üçüncü Taraflar", p: ["Talepler daha hızlı yanıt için Telegram servisi aracılığıyla iletilir. Bu servisteki işleme kendi koşullarına tabidir."] },
+        { h: "5. Veri Saklama", p: ["Verilerinizi yalnızca proje üzerinde çalışmak için gerekli olduğu sürece saklarız ve talebiniz üzerine sileriz."] },
+        { h: "6. Haklarınız", p: ["Bu sitede listelenen iletişim bilgilerini kullanarak verilerinize erişim, düzeltme veya silme talebinde bulunabilirsiniz."] },
+      ]
+    },
+    terms: {
+      title: "📋 Hizmet Koşulları",
+      effective: "Yürürlük Tarihi: 1 Ocak 2026",
+      sections: [
+        { h: "1. Koşulların Kabulü", p: ["Bu web sitesini kullanarak ve bir talep göndererek, bu koşulları kabul edersiniz."] },
+        { h: "2. İş Kapsamı", p: ["Proje bazında web siteleri, Telegram botları, entegrasyonlar ve otomasyon geliştiriyoruz."] },
+        { h: "3. Fiyatlandırma ve Ödeme", p: ["Bu sitede gösterilen fiyatlar başlangıç fiyatlarıdır. Nihai tutar iş başlamadan önce üzerinde anlaşılır."] },
+        { h: "4. Sahiplik", p: ["Tam ödeme yapıldıktan sonra, teslim edilen ürünün hakları müşteriye devredilir."] },
+        { h: "5. Sorumluluğun Sınırlandırılması", p: ["Kontrolümüz dışındaki üçüncü taraf hizmetlerin kesintilerinden sorumlu değiliz."] },
+        { h: "6. Koşullardaki Değişiklikler", p: ["Bu koşulları güncelleyebiliriz. Güncel sürüm her zaman bu sayfada yayınlanır."] },
+      ]
+    },
+    legal: {
+      title: "⚖️ Yasal Bilgiler",
+      effective: "Yürürlük Tarihi: 1 Ocak 2026",
+      sections: [
+        { h: "1. Site Sahibi", p: ["Bu web sitesi APL Pages Development ekibi tarafından yönetilmektedir."] },
+        { h: "2. İletişim", p: ["Yasal konular için lütfen İletişim bölümünde belirtilen iletişim bilgilerini kullanın."] },
+        { h: "3. İçerik Feragatnamesi", p: ["Bu sitedeki bilgiler genel bilgilendirme amacıyla sunulmaktadır ve kamuya açık bir teklif niteliğinde değildir."] },
+        { h: "4. Geçerli Hukuk", p: ["Hizmet sağlayıcısının kayıtlı olduğu ülkenin yasaları geçerlidir."] },
+      ]
+    },
+  },
+  nl: {
+    privacy: {
+      title: "🔒 Privacybeleid",
+      effective: "Ingangsdatum: 1 januari 2026",
+      sections: [
+        { h: "1. Overzicht", p: ["Dit beleid legt uit welke gegevens wij op deze website verzamelen, waarom we ze gebruiken en hoe we ze beschermen."] },
+        { h: "2. Informatie die wij verzamelen", p: ["Wij verwerken alleen de gegevens die u zelf verstrekt via het aanvraagformulier: uw naam, contactgegevens, telefoonnummer, budget en projectomschrijving."] },
+        { h: "3. Hoe wij informatie gebruiken", p: ["Uw gegevens worden uitsluitend gebruikt om contact met u op te nemen en het project te bespreken. We verkopen ze niet en delen ze niet met advertentienetwerken."] },
+        { h: "4. Derde partijen", p: ["Aanvragen worden via Telegram verzonden voor een snellere reactie. De verwerking daar valt onder de eigen voorwaarden van die dienst."] },
+        { h: "5. Gegevensbewaring", p: ["Wij bewaren uw gegevens alleen zolang als nodig is om aan het project te werken en verwijderen ze op uw verzoek."] },
+        { h: "6. Uw rechten", p: ["U kunt toegang tot, correctie van of verwijdering van uw gegevens aanvragen via de contactgegevens op deze site."] },
+      ]
+    },
+    terms: {
+      title: "📋 Algemene voorwaarden",
+      effective: "Ingangsdatum: 1 januari 2026",
+      sections: [
+        { h: "1. Aanvaarding van de voorwaarden", p: ["Door deze website te gebruiken en een aanvraag in te dienen, accepteert u deze voorwaarden."] },
+        { h: "2. Reikwijdte van het werk", p: ["Wij bouwen websites, Telegram-bots, integraties en automatisering per project."] },
+        { h: "3. Prijzen en betaling", p: ["De op deze site vermelde prijzen zijn startprijzen. Het definitieve bedrag wordt overeengekomen voordat het werk begint."] },
+        { h: "4. Eigendom", p: ["Na volledige betaling gaan de rechten op het geleverde product over op de klant."] },
+        { h: "5. Beperking van aansprakelijkheid", p: ["Wij zijn niet aansprakelijk voor storingen van diensten van derden waarover wij geen controle hebben."] },
+        { h: "6. Wijzigingen in de voorwaarden", p: ["Wij kunnen deze voorwaarden bijwerken. De actuele versie wordt altijd op deze pagina gepubliceerd."] },
+      ]
+    },
+    legal: {
+      title: "⚖️ Juridische informatie",
+      effective: "Ingangsdatum: 1 januari 2026",
+      sections: [
+        { h: "1. Sitehouder", p: ["Deze website wordt onderhouden door het APL Pages Development-team."] },
+        { h: "2. Contact", p: ["Voor juridische vragen kunt u de contactgegevens gebruiken die in de sectie Contact worden vermeld."] },
+        { h: "3. Inhoudsvoorbehoud", p: ["De informatie op deze site is bedoeld voor algemene informatiedoeleinden en vormt geen openbaar aanbod."] },
+        { h: "4. Toepasselijk recht", p: ["Het recht van het land waar de dienstverlener is geregistreerd, is van toepassing."] },
+      ]
+    },
+  },
+  ro: {
+    privacy: {
+      title: "🔒 Politica de confidențialitate",
+      effective: "Data intrării în vigoare: 1 ianuarie 2026",
+      sections: [
+        { h: "1. Prezentare generală", p: ["Această politică explică ce date colectăm pe acest site, de ce le folosim și cum le protejăm."] },
+        { h: "2. Informații pe care le colectăm", p: ["Procesăm doar datele pe care le furnizați dumneavoastră prin formularul de solicitare: numele, datele de contact, numărul de telefon, bugetul și descrierea proiectului."] },
+        { h: "3. Cum utilizăm informațiile", p: ["Datele dumneavoastră sunt utilizate exclusiv pentru a vă contacta și a discuta proiectul. Nu le vindem și nu le partajăm cu rețele publicitare."] },
+        { h: "4. Terți", p: ["Cererile sunt transmise prin serviciul Telegram pentru un răspuns mai rapid. Procesarea în acest serviciu este reglementată de propriii săi termeni."] },
+        { h: "5. Păstrarea datelor", p: ["Păstrăm datele dumneavoastră doar atât timp cât este necesar pentru a lucra la proiect și le ștergem la cererea dumneavoastră."] },
+        { h: "6. Drepturile dumneavoastră", p: ["Puteți solicita accesul, corectarea sau ștergerea datelor dumneavoastră folosind contactele listate pe acest site."] },
+      ]
+    },
+    terms: {
+      title: "📋 Termeni și condiții",
+      effective: "Data intrării în vigoare: 1 ianuarie 2026",
+      sections: [
+        { h: "1. Acceptarea termenilor", p: ["Prin utilizarea acestui site web și trimiterea unei cereri, acceptați acești termeni."] },
+        { h: "2. Domeniul de aplicare al lucrărilor", p: ["Construim site-uri web, boți Telegram, integrări și automatizări în funcție de fiecare proiect."] },
+        { h: "3. Prețuri și plată", p: ["Prețurile afișate pe acest site sunt prețuri de pornire. Suma finală este convenită înainte de începerea lucrărilor."] },
+        { h: "4. Proprietate", p: ["După efectuarea plății integrale, drepturile asupra produsului livrat sunt transferate clientului."] },
+        { h: "5. Limitarea răspunderii", p: ["Nu suntem responsabili pentru întreruperile serviciilor terților asupra cărora nu avem control."] },
+        { h: "6. Modificări ale termenilor", p: ["Putem actualiza acești termeni. Versiunea curentă este publicată întotdeauna pe această pagină."] },
+      ]
+    },
+    legal: {
+      title: "⚖️ Informații legale",
+      effective: "Data intrării în vigoare: 1 ianuarie 2026",
+      sections: [
+        { h: "1. Proprietarul site-ului", p: ["Acest site web este întreținut de echipa APL Pages Development."] },
+        { h: "2. Contact", p: ["Pentru întrebări juridice, vă rugăm să utilizați contactele listate în secțiunea Contact."] },
+        { h: "3. Declinarea responsabilității privind conținutul", p: ["Informațiile de pe acest site sunt furnizate în scopuri generale de informare și nu constituie o ofertă publică."] },
+        { h: "4. Legea aplicabilă", p: ["Se aplică legislația țării de înregistrare a furnizorului de servicii."] }
+      ]
+    }
   }
 };
 
@@ -581,7 +1101,11 @@ const FLAGS = {
   de: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="60" height="10" fill="#000000"/><rect y="10" width="60" height="10" fill="#DD0000"/><rect y="20" width="60" height="10" fill="#FFCE00"/></svg>',
   fr: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="20" height="30" fill="#002395"/><rect x="20" width="20" height="30" fill="#ffffff"/><rect x="40" width="20" height="30" fill="#ED2939"/></svg>',
   pl: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="60" height="15" fill="#ffffff"/><rect y="15" width="60" height="15" fill="#DC143C"/></svg>',
-  sk: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="60" height="10" fill="#ffffff"/><rect y="10" width="60" height="10" fill="#0B4EA2"/><rect y="20" width="60" height="10" fill="#EE1C25"/><path d="M12 5 H27 V17 C27 23 19.5 27 19.5 27 C19.5 27 12 23 12 17 Z" fill="#EE1C25" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8 V23 M14 12 H22 M14.5 16 H21.5" stroke="#ffffff" stroke-width="2.2"/></svg>'
+  sk: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="60" height="10" fill="#ffffff"/><rect y="10" width="60" height="10" fill="#0B4EA2"/><rect y="20" width="60" height="10" fill="#EE1C25"/><path d="M12 5 H27 V17 C27 23 19.5 27 19.5 27 C19.5 27 12 23 12 17 Z" fill="#EE1C25" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8 V23 M14 12 H22 M14.5 16 H21.5" stroke="#ffffff" stroke-width="2.2"/></svg>',
+  es: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="60" height="30" fill="#AA151B"/><rect y="7.5" width="60" height="15" fill="#F1BF00"/></svg>',
+  tr: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="60" height="30" fill="#E30A17"/><circle cx="24" cy="15" r="8" fill="#ffffff"/><circle cx="26.5" cy="15" r="6.4" fill="#E30A17"/><path d="M33 15 L40 12 L37.5 15 L40 18 Z" fill="#ffffff"/></svg>',
+  nl: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="60" height="10" fill="#AE1C28"/><rect y="10" width="60" height="10" fill="#ffffff"/><rect y="20" width="60" height="10" fill="#21468B"/></svg>',
+  ro: '<svg width="20" height="14" viewBox="0 0 60 30" style="' + FLAG_STYLE + '" aria-hidden="true"><rect width="20" height="30" fill="#002B7F"/><rect x="20" width="20" height="30" fill="#FCD116"/><rect x="40" width="20" height="30" fill="#CE1126"/></svg>'
 };
 
 const BASE_PRICE = 199;
@@ -595,7 +1119,11 @@ const LANGS = [
   { code: 'de', native: 'Deutsch'    },
   { code: 'fr', native: 'Français'   },
   { code: 'pl', native: 'Polski'     },
-  { code: 'sk', native: 'Slovenčina' }
+  { code: 'sk', native: 'Slovenčina' },
+  { code: 'es', native: 'Español'    },
+  { code: 'tr', native: 'Türkçe'     },
+  { code: 'nl', native: 'Nederlands' },
+  { code: 'ro', native: 'Română'     }
 ];
 
 const CURRENCIES = [
@@ -644,7 +1172,11 @@ const LANG_BY_COUNTRY = {
   US: 'en', GB: 'en', CA: 'en', AU: 'en', IE: 'en', NZ: 'en',
   IT: 'it', DE: 'de', AT: 'de', CH: 'de',
   FR: 'fr', BE: 'fr', LU: 'fr', MC: 'fr',
-  PL: 'pl', SK: 'sk', CZ: 'sk'
+  PL: 'pl', SK: 'sk', CZ: 'sk',
+  ES: 'es', MX: 'es', AR: 'es', CO: 'es', CL: 'es', PE: 'es',
+  TR: 'tr',
+  NL: 'nl',
+  RO: 'ro', MD: 'ro'
 };
 
 function pickLangFromBrowser() {
