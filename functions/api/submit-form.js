@@ -83,10 +83,10 @@ async function sendToTelegram(formData, env) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      chat_id: env.TELEGRAM_CHAT_ID,
-      text: message,
-      disable_web_page_preview: true
-    })
+  chat_id: parseInt(env.TELEGRAM_CHAT_ID, 10),
+  text: message,
+  disable_web_page_preview: true
+})
   });
 
   if (!res.ok) {
